@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Saheli Bherayti Store & Ladies Corner</title>
+<meta name="description" content="Beauty, cosmetics, skincare, haircare and personal care store in Valmikinagar, West Champaran, Bihar.">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">S</div><div><b>Saheli Bherayti</b><span>Store & Ladies Corner</span></div></div>
+  <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#loyalty">Loyalty</a><a href="#contact">Contact</a><a class="admin-link" href="/admin.html">Admin</a></nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div><span class="pill">Beauty • Care • Style</span><h1>Your local beauty destination, <em>made for you.</em></h1>
+  <p>Cosmetics, skincare, haircare, fragrance and everyday beauty essentials — all in one place.</p>
+  <div class="hero-actions"><a class="btn" href="#shop">Shop Products</a><a class="btn ghost" href="https://wa.me/917258040395?text=Hello%20Saheli%20Bherayti%20Store%2C%20I%20want%20to%20know%20about%20your%20products." target="_blank">WhatsApp Us</a></div></div>
+  <div class="hero-card"><div class="sparkle">✦</div><h3>Daily Beauty Rewards</h3><p>Earn loyalty points on eligible purchases and unlock surprise scratch-card vouchers.</p><a href="#loyalty">See how it works →</a></div>
+</section>
+
+<section class="section" id="shop"><div class="section-head"><div><span class="eyebrow">OUR COLLECTION</span><h2>Shop beauty essentials</h2></div><input id="search" class="search" placeholder="Search products…"></div>
+<div id="categories" class="chips"></div><div id="products" class="grid"></div><div id="empty" class="empty hidden">No products found.</div></section>
+
+<section id="loyalty" class="section loyalty"><div class="loyalty-copy"><span class="eyebrow">SAHELI REWARDS</span><h2>Shop. Earn. Scratch. Smile.</h2><p>Use the same mobile number for online and offline purchases. Your rewards stay linked to your number.</p>
+<div class="rules"><div><strong>₹200–₹999</strong><span>1 point</span></div><div><strong>₹1,000+</strong><span>2 points</span></div><div><strong>10 points</strong><span>Scratch-card reward</span></div></div>
+<small>Eligible loyalty points are awarded only once per customer per calendar day. Purchases below ₹200 do not earn points.</small></div>
+<div class="lookup"><h3>Check your points</h3><p>Enter your 10-digit mobile number.</p><div class="row"><input id="phoneLookup" inputmode="numeric" maxlength="10" placeholder="Mobile number"><button class="btn" id="lookupBtn">Check</button></div><div id="customerResult"></div></div></section>
+
+<section class="section order"><div><span class="eyebrow">ONLINE ORDER</span><h2>Order from PIN 845107</h2><p>Online delivery is currently available only in <b>845107</b>. Add products to cart and send your order request.</p></div>
+<div class="cart"><div id="cartItems">Your cart is empty.</div><div class="cart-total">Total <b id="cartTotal">₹0</b></div><div class="row"><input id="orderName" placeholder="Your name"><input id="orderPhone" inputmode="numeric" maxlength="10" placeholder="Mobile number"></div><input id="orderPin" value="845107" maxlength="6" placeholder="PIN code"><textarea id="orderAddress" rows="3" placeholder="Full delivery address"></textarea><button class="btn full" id="orderBtn">Pay Securely with Razorpay</button><div id="orderMsg"></div></div></section>
+
+<section id="contact" class="contact"><div><span class="eyebrow">VISIT US</span><h2>Saheli Bherayti Store<br>& Ladies Corner</h2><p>📍 Bherihari Chauk, Valmikinagar, West Champaran, Bihar – 845107</p><p>📞 <a href="tel:+917258040395">7258040395</a><br>✉️ <a href="mailto:sahelibheraiti@gmail.com">sahelibheraiti@gmail.com</a></p></div><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bherihari%20Chauk%20Valmikinagar%20West%20Champaran%20Bihar%20845107">Open in Google Maps ↗</a></section>
+</main>
+<footer>© <span id="year"></span> Saheli Bherayti Store & Ladies Corner · <a href="/admin.html">Admin</a></footer>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script><script src="/app.js"></script>
+</body></html>

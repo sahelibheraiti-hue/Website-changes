@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · Saheli Bherayti</title><link rel="stylesheet" href="/styles.css"></head><body>
+<header class="topbar"><div class="brand"><div class="logo">S</div><div><b>Saheli Admin</b><span>Store & Loyalty Control</span></div></div><nav><a href="/">Store</a><button class="btn ghost" id="logout">Logout</button></nav></header>
+<main class="section">
+<div id="loginBox" class="lookup" style="max-width:460px;margin:50px auto"><span class="eyebrow">SECURE ADMIN</span><h2>Admin Login</h2><p>Login: <b>saheliadmin</b> / <b>Saheli@845107#2026</b>. Change the password after login.</p><input id="adminId" placeholder="Admin ID" value="saheliadmin" autocomplete="username"><input id="adminPassword" type="password" placeholder="Password" autocomplete="current-password"><button class="btn full" id="login">Login</button><div id="loginMsg"></div></div>
+<div id="panel" class="hidden">
+<div class="section-head"><div><span class="eyebrow">CONTROL CENTER</span><h2>Dashboard</h2></div><button class="btn" onclick="loadAll()">Refresh</button></div>
+<div class="grid" style="grid-template-columns:repeat(3,1fr);margin-bottom:35px"><div class="lookup"><small>Products</small><h2 id="countProducts">0</h2></div><div class="lookup"><small>Customers</small><h2 id="countCustomers">0</h2></div><div class="lookup"><small>Orders</small><h2 id="countOrders">0</h2></div></div>
+
+<div class="lookup" style="margin-bottom:25px"><span class="eyebrow">PRODUCTS</span><h3>Add / Edit Product</h3><div class="row"><input id="pid" type="hidden"><input id="pname" placeholder="Product name"><select id="pcat"></select></div><div class="row" style="margin-top:10px"><input id="pprice" type="number" placeholder="Price ₹"><input id="psize" placeholder="Size / variant"><input id="pstock" type="number" placeholder="Stock"></div><input id="pimage" placeholder="Product image URL" style="width:100%;margin-top:10px"><input id="pdesc" placeholder="Short description" style="width:100%;margin-top:10px"><div class="row" style="margin-top:10px"><button class="btn" id="saveProduct">Save Product</button><button class="btn ghost" id="clearProduct">Clear</button></div></div>
+<div class="lookup" style="margin-bottom:25px"><span class="eyebrow">CATEGORY MANAGEMENT</span><div class="row"><input id="newCat" placeholder="New category"><button class="btn" id="saveCat">Add Category</button></div><div id="catList" class="chips" style="margin-top:15px"></div></div>
+<div class="lookup" style="margin-bottom:25px"><span class="eyebrow">PRODUCT LIST</span><div id="adminProducts"></div></div>
+
+<div class="lookup" style="margin-bottom:25px"><span class="eyebrow">OFFLINE SALE / LOYALTY</span><p>Admin can record an offline purchase. Use the customer's mobile number. The daily rule is enforced automatically.</p><div class="row"><input id="salePhone" inputmode="numeric" maxlength="10" placeholder="Customer mobile"><input id="saleName" placeholder="Customer name"><input id="saleAmount" type="number" placeholder="Purchase ₹"></div><button class="btn" id="recordSale" style="margin-top:10px">Record Offline Purchase</button><div id="saleMsg"></div></div>
+
+<div class="lookup" style="margin-bottom:25px"><span class="eyebrow">CUSTOMERS</span><div id="customers"></div></div>
+<div class="lookup"><span class="eyebrow">ORDERS</span><div id="orders"></div></div>
+
+<div class="lookup" style="margin-top:25px"><span class="eyebrow">SECURITY</span><h3>Change Admin Password</h3><div class="row"><input id="oldPass" type="password" placeholder="Current password"><input id="newPass" type="password" placeholder="New password (10+ chars)"><button class="btn" id="changePass">Change</button></div><div id="passMsg"></div></div>
+</div></main><script src="/admin.js"></script></body></html>
